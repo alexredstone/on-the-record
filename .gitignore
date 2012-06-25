@@ -1,3 +1,13 @@
+#mac OS
+*.DS_store
+
+#eclipse
+.project
+.settings
+.classpath
+quote-extractor/bin
+
+#java
 *.class
 
 # Package Files #

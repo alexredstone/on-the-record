@@ -1,0 +1,34 @@
+
+{
+    "timeline":
+    {
+        "headline":"OnTheRecord",
+        "type":"default",
+		"startDate":"2012,1,1",
+		"text":"We help you track quotations from politicians over time",
+        "date": [
+            {
+                "startDate":"2012,1,1",
+                "headline":"a",
+                "text":"a",
+                "asset":
+                {
+                    "media":"",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2012,1,10",
+                "headline":"b",
+                "text":"b",
+                "asset":
+                {
+                    "media":"",
+                    "credit":"",
+                    "caption":""
+                }
+            }
+        ]
+    }
+}
