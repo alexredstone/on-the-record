@@ -6,11 +6,15 @@
 .settings
 .classpath
 quote-extractor/bin
+quote-extractor/build
 
 #java
 *.class
 
 # Package Files #
-*.jar
 *.war
 *.ear
+
+# Python virtualenvs
+api/env
+gather/env
