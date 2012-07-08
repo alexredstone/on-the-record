@@ -35,6 +35,13 @@ public class Quote {
 		this.person = person;
 	}
 	
+	public int countWords() {
+		if (null == quote || quote.isEmpty()) {
+			return 0;
+		}
+		return quote.split(" ").length;
+	}
+	
 	public JSONObject toJson() {
 		StringBuilder stringBuilder = new StringBuilder();
 		JSONObject obj = new JSONObject();
@@ -43,3 +50,4 @@ public class Quote {
 		return obj;
 	}
 }
+

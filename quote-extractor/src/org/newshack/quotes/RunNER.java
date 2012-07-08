@@ -189,7 +189,10 @@ public class RunNER {
 			quote.setStart(match + QUOTE.length());
 			quote.setEnd(endIndex);
 			quote.setQuote(input.substring(quote.getStart(), quote.getEnd()));
-			quotes.add(quote);
+			if (quote.countWords() > 4) {
+				// ignore short quotes
+				quotes.add(quote);
+			}
 			match = endIndex+1; // avoid parsing the same quote
 		}
 		return quotes;
@@ -210,3 +213,4 @@ public class RunNER {
 		return os.toString();
 	}
 }
+
