@@ -41,6 +41,7 @@ public class Quote {
 		return quote.split(" ").length;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public JSONObject toJson() {
 		StringBuilder stringBuilder = new StringBuilder();
 		JSONObject obj = new JSONObject();

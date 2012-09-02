@@ -2,9 +2,6 @@
 *.DS_store
 
 #eclipse
-.project
-.settings
-.classpath
 quote-extractor/bin
 quote-extractor/build
 

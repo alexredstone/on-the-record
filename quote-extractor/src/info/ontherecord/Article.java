@@ -37,6 +37,7 @@ public class Article {
 		this.content = content;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public JSONObject toJson() {
 		StringBuilder stringBuilder = new StringBuilder();
 		JSONObject obj = new JSONObject();
