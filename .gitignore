@@ -5,6 +5,9 @@
 quote-extractor/bin
 quote-extractor/build
 
+#vim
+*.swp
+
 #java
 *.class
 
@@ -15,3 +18,6 @@ quote-extractor/build
 # Python virtualenvs
 api/env
 gather/env
+
+# Python compiled code
+*.pyc
