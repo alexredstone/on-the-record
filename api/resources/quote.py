@@ -11,7 +11,7 @@ class QuoteResource:
 		self.solr = SolrConnection('http://localhost:8983/solr')
 
 	@cherrypy.expose
-	def index(self, person=None, topic=None):
+	def index(self, callback=None, person=None, topic=None):
 
 		filters = []
 		filters.append('type:quote')
