@@ -11,9 +11,17 @@ class QuoteResource:
 		self.solr = SolrConnection('http://localhost:8983/solr')
 
 	@cherrypy.expose
-	def index(self):
+	def index(self, person=None, topic=None):
 
-		results = self.solr.query('type:quote AND (person_t:obama OR person_t:romney)', rows=100)
+		filters = []
+		filters.append('type:quote')
+
+		if person:
+			filters.append('person_t:%s' % person)
+		if topic:
+			filters.append('quote_t:%s' % topic)
+
+		results = self.solr.query(q = ' AND '.join(filters), rows=100)
 		docs = []
 
 		timeline = { 
