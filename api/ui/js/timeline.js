@@ -8767,7 +8767,7 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 					LoadLib.js(raw_data, VMM.Timeline.DataObj.onJSONPLoaded);
 				} else {
 					trace("DATA SOURCE: JSON");
-					VMM.getJSON(raw_data + "?callback=onJSONP_Data", VMM.Timeline.DataObj.parseJSON);
+					VMM.getJSON(raw_data, VMM.Timeline.DataObj.parseJSON);
 				}
 			} else if (type.of(raw_data) == "html") {
 				trace("DATA SOURCE: HTML");
