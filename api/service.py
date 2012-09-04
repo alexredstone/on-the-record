@@ -20,9 +20,10 @@ class RootResource:
 </html>'''
 
 # Construct the RESTful Resource Hierarchy
-rootResource = RootResource()
-rootResource.person = PersonResource()
-rootResource.quote = QuoteResource()
+rootResource = lambda:0
+rootResource.api = RootResource()
+rootResource.api.person = PersonResource()
+rootResource.api.quote = QuoteResource()
 
 # Configure a development server
 basedir = os.path.dirname(os.path.abspath(__file__))
@@ -31,7 +32,7 @@ conf = {
         'server.socket_host': '0.0.0.0',
         'server.socket_port': 8000,
     },
-    '/ui': {
+    '/': {
         'tools.staticdir.on': True,
         'tools.staticdir.dir': os.path.join(basedir, 'ui'),
         'tools.staticdir.index': 'index.html',
